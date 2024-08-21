@@ -1,11 +1,12 @@
 
 import './App.css'
+import MyRecipes from './pages/MyRecipes'
 
 function App() {
 
   return (
     <>
-      
+      <MyRecipes/>
     </>
   )
 }
