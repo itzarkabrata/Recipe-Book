@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        moderustic: ['Moderustic', 'sans-serif'],
+      },
     },
   },
   plugins: [],
