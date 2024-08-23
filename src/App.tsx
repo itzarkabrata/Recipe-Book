@@ -12,7 +12,7 @@ function App() {
     <div className='font-moderustic min-h-screen flex flex-col'>
       <BrowserRouter>
       <Header />
-      <div className='flex flex-grow'>
+      <div className='flex flex-grow justify-center relative'>
         <Routes>
           <Route
             path='/'
