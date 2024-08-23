@@ -18,7 +18,7 @@ export default function RecipeCards({recipe_title,recipe_img}: Props) {
     backgroundSize : "cover"
   });
 
-  const [showRecipePopup, setshowRecipePopup] = useState<boolean>(true);
+  const [showRecipePopup, setshowRecipePopup] = useState<boolean>(false);
 
   const handleRrecipePopUp = ():void=>{
     setshowRecipePopup(true);
