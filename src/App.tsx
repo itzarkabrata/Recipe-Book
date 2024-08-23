@@ -19,7 +19,7 @@ function App() {
     <div className='font-moderustic min-h-screen flex flex-col'>
       <BrowserRouter>
       <Header handleSearchButton={handleSearchButton}/>
-      <div className='flex flex-grow bg-[#ffdb9e] flex-col w-full'>
+      <div className='flex flex-grow bg-[#ffdb9e] justify-center flex-col w-full'>
         <Routes>
           <Route
             path='/'
