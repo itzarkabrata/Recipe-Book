@@ -9,6 +9,10 @@ export default {
       fontFamily:{
         moderustic: ['Moderustic', 'sans-serif'],
       },
+      colors:{
+        darkShade: '#265227',
+        lightShade: '#a5cc6f'
+      }
     },
   },
   plugins: [],
