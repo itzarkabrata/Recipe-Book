@@ -5,13 +5,20 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Home from './pages/Home'
 import MyRecipes from './pages/MyRecipes'
+import { useState } from 'react'
 
 function App() {
+  
+  const [formData,setFormData] = useState<string>("")
 
+  const handle = (data:string)=> {
+    setFormData(data)
+  }
+  
   return (
     <div className='font-moderustic min-h-screen flex flex-col'>
       <BrowserRouter>
-      <Header />
+      <Header/>
       <div className='flex flex-grow'>
         <Routes>
           <Route
