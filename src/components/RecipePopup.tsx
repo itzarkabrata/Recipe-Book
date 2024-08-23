@@ -14,7 +14,7 @@ export default function RecipePopup({ func1 }: Props) {
         <AnimatePresence>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center backdrop-blur-md" onClick={closeCardPopup}>
 
-                <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="flex flex-col gap-3 w-4/5 lg:w-2/3 bg-orange-100 px-7 pt-4 pb-6 rounded-xl h-max">
+                <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="flex flex-col gap-3 w-4/5 lg:w-2/3 bg-orange-100 px-7 pt-4 pb-6 rounded-xl h-max mt-16">
 
                     <div id="back-btn" className="mb-2">
                         <i className="fa-solid fa-arrow-left text-2xl cursor-pointer" onClick={closeCardPopup}></i>

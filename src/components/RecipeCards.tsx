@@ -13,10 +13,10 @@ interface BackgroundCardStyle{
 
 export default function RecipeCards({recipe_title,recipe_img}: Props) {
 
-  const [bgStyle,setbgStyle] = useState<BackgroundCardStyle>({
+  const bgStyle:BackgroundCardStyle={
     background : `linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)) , url("${recipe_img}")`,
     backgroundSize : "cover"
-  });
+  };
 
   const [showRecipePopup, setshowRecipePopup] = useState<boolean>(false);
 
