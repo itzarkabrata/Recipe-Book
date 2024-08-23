@@ -9,21 +9,21 @@ import { useState } from 'react'
 
 function App() {
   
-  const [formData,setFormData] = useState<string>("")
-
-  const handle = (data:string)=> {
-    setFormData(data)
+  const [searchOpen,setSearchOpen] = useState<boolean>(false)
+  const handleSearchButton = (data:boolean)=> {
+    // console.log(data)
+    setSearchOpen(data)
   }
   
   return (
     <div className='font-moderustic min-h-screen flex flex-col'>
       <BrowserRouter>
-      <Header/>
-      <div className='flex flex-grow'>
+      <Header handleSearchButton={handleSearchButton}/>
+      <div className='flex flex-grow bg-[#ffdb9e] flex-col w-full'>
         <Routes>
           <Route
             path='/'
-            element={<Home/>}
+            element={<Home searchButton={searchOpen}/>}
           ></Route>
           <Route
             path='/myrecipes'

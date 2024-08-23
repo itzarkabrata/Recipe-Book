@@ -1,18 +1,28 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { Link } from 'react-router-dom'
-import SearchBox from "./SearchBox";
 
+type PropsType = {
+    handleSearchButton:(data:boolean)=>void;
+}
 
-const Header = () => {
+const Header = ({handleSearchButton}:PropsType) => {
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [searchOpen, setSearchOpen] = useState<boolean>(false);
+    // const [flag,setFlag] = useState<number>(0)
+
+    const handleSearchOpen = ()=>{
+        setSearchOpen(!searchOpen)
+    }
+
+    useEffect(()=>{
+        handleSearchButton(searchOpen)
+    },[searchOpen])
     
     return (
         <div className="w-full px-4 min-h-16 shadow-md flex max-md:flex-row-reverse items-center justify-between sticky top-0 z-50 bg-slate-200">
 
-            <div className=" cursor-pointer text-xl text-lightShade" onClick={()=>{setSearchOpen(!searchOpen)}}><i className="fa-solid fa-magnifying-glass"></i></div>
-            <SearchBox searchShow = {searchOpen}/>
+            <div className=" cursor-pointer text-xl text-lightShade" title="Search Here" onClick={handleSearchOpen}><i className="fa-solid fa-magnifying-glass"></i></div>
             <div id="logo" className=" font-semibold text-2xl md:ml-48">
                 <span className="text-darkShade">Recipe </span><span className="text-lightShade">Book</span>
             </div>
