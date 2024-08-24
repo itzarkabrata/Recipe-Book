@@ -5,18 +5,25 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Home from './pages/Home'
 import MyRecipes from './pages/MyRecipes'
+import { useState } from 'react'
 
 function App() {
-
+  
+  const [searchOpen,setSearchOpen] = useState<boolean>(false)
+  const handleSearchButton = (data:boolean)=> {
+    // console.log(data)
+    setSearchOpen(data)
+  }
+  
   return (
     <div className='font-moderustic min-h-screen flex flex-col'>
       <BrowserRouter>
-      <Header />
-      <div className='flex flex-grow'>
+      <Header handleSearchButton={handleSearchButton}/>
+      <div className='flex flex-grow bg-[#ffdb9e] justify-center flex-col w-full'>
         <Routes>
           <Route
             path='/'
-            element={<Home/>}
+            element={<Home searchButton={searchOpen}/>}
           ></Route>
           <Route
             path='/myrecipes'

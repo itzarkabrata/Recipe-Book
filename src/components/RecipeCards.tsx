@@ -13,10 +13,10 @@ interface BackgroundCardStyle{
 
 export default function RecipeCards({recipe_title,recipe_img}: Props) {
 
-  const [bgStyle,setbgStyle] = useState<BackgroundCardStyle>({
+  const bgStyle:BackgroundCardStyle = {
     background : `linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)) , url("${recipe_img}")`,
     backgroundSize : "cover"
-  });
+  };
 
   const [showRecipePopup, setshowRecipePopup] = useState<boolean>(false);
 
@@ -30,6 +30,7 @@ export default function RecipeCards({recipe_title,recipe_img}: Props) {
 
   return (
     <div>
+        
         {showRecipePopup && <RecipePopup func1={closeCardPopup}/>}
         <div className="flex justify-between items-center gap-5 w-full h-36 p-2 sm:p-5 rounded-xl cursor-pointer" style={bgStyle} onClick={handleRrecipePopUp}>
             <div id="recipe-image" className="w-40 lg:w-44 xl:w-48 rounded-xl shadow-black shadow-2xl">

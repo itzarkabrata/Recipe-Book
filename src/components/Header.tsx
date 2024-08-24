@@ -1,31 +1,54 @@
-import { useState } from "react"
-import {Link} from 'react-router-dom';
+import { useState,useEffect } from "react"
+import { Link } from 'react-router-dom'
 
-const Header = () => {
+type PropsType = {
+    handleSearchButton:(data:boolean)=>void;
+}
+
+const Header = ({handleSearchButton}:PropsType) => {
 
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [searchOpen, setSearchOpen] = useState<boolean>(false);
+    // const [flag,setFlag] = useState<number>(0)
 
+    const handleSearchOpen = ()=>{
+        setSearchOpen(!searchOpen)
+    }
+
+    useEffect(()=>{
+        handleSearchButton(searchOpen)
+    },[searchOpen])
+    
     return (
-        <div className="w-full min-h-16 shadow-md flex items-center justify-between sticky top-0 z-50 bg-slate-200">
-            <div id="logo" className=" font-semibold text-4xl ml-10">logo</div>
+        <div className="w-full px-4 min-h-16 shadow-md flex max-md:flex-row-reverse items-center justify-between sticky top-0 z-50 bg-slate-200">
+
+            <div className=" cursor-pointer text-xl text-lightShade" title="Search Here" onClick={handleSearchOpen}><i className="fa-solid fa-magnifying-glass"></i></div>
+            <div id="logo" className=" font-semibold text-2xl md:ml-48">
+                <span className="text-darkShade">Recipe </span><span className="text-lightShade">Book</span>
+            </div>
+
             <div>
-                <div className="sm:hidden mr-4 text-2xl" onClick={() => { setIsOpen(!isOpen) }}>
+
+                <div className="md:hidden text-xl text-lightShade" onClick={() => { setIsOpen(!isOpen) }}>
                     <i className={isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
-                </div> 
-                    <nav className={`${isOpen?"max-h-screen opacity-100":"opacity-0 max-h-0"} sm:hidden flex flex-col items-start justify-around  w-full min-h-[170px] h-auto top-16 absolute right-0 bg-[#34396da1] font-medium pl-4 pb-2  text-white z-50 rounded-b-lg transition-max-height transition-opacity overflow-hidden duration-1000 ease-in-out`}>
-                        <Link to="/">Home</Link>
-                        <Link to="/myrecipes">My Recipes</Link>
-                        <Link to="#">
-                            <div className="text-white bg-green-400 py-2 px-4 rounded-md">Login</div>
-                        </Link>
-                </nav>
-                <nav className="max-sm:hidden flex items-center justify-around w-[350px] font-medium">
+                </div>
+                {isOpen ? <nav className="max-h-screen z-40 md:hidden text-lightShade flex flex-col items-start justify-around  w-full min-h-[170px] h-auto top-16 absolute right-0 bg-[#040418a1] font-medium pl-4 pb-2 rounded-b-lg transition-max-height transition-opacity overflow-hidden duration-1000 ease-in-out">
                     <Link to="/">Home</Link>
                     <Link to="/myrecipes">My Recipes</Link>
                     <Link to="#">
-                        <div className="text-white bg-green-400 py-2 px-4 rounded-md">Login</div>
+                        <div className="text-white bg-darkShade py-2 px-4 rounded-md">Login</div>
+                    </Link>
+                </nav>: <></>}
+                
+
+                <nav className="max-md:hidden text-darkShade flex items-center justify-between w-[250px] font-medium text-sm">
+                    <Link to="/">Home</Link>
+                    <Link to="/myrecipes">My Recipes</Link>
+                    <Link to="#">
+                        <div className="text-white bg-darkShade py-2 px-4 rounded-md">Login</div>
                     </Link>
                 </nav>
+
             </div>
 
         </div>
