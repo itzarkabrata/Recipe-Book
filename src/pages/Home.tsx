@@ -33,8 +33,8 @@ const Home = ({ searchButton }: PropsType) => {
 
             <span className={`mb-4 px-2 max-sm:text-3xl max-md:text-4xl text-5xl font-semibold transition-opacity ease-in duration-[1500ms] ${isVisible ? "opacity-100" : "opacity-0"}`}>Discover Delicious Recipes for Every Occasion</span>
             <a href="#all_recipe">
-              <button className={`flex flex-row items-center gap-2 border-solid border-[3px] py-3 px-6`}>
-                <span>Explore Now</span>
+              <button className={`flex flex-row items-center rounded-lg hover:bg-slate-200 hover:bg-opacity-10 gap-2 border-solid border-[3px] py-3 px-6 transition-opacity ease-in duration-[1500ms] ${isVisible ? "opacity-100" : "opacity-0"}`}>
+                <span className="text-sm sm:text-lg">Explore Now</span>
                 <i className="fa-solid fa-arrow-right"></i>
               </button>
             </a>
