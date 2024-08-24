@@ -39,9 +39,9 @@ const Header = ({handleSearchButton}:PropsType) => {
                     <i className={isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
                 </div>
                 {isOpen ? <nav className="max-h-screen z-40 md:hidden text-lightShade flex flex-col items-start justify-around  w-full min-h-[170px] h-auto top-16 absolute right-0 bg-[#040418a1] font-medium pl-4 pb-2 rounded-b-lg transition-max-height transition-opacity overflow-hidden duration-1000 ease-in-out">
-                    <Link to="/">Home</Link>
-                    <Link to="/myrecipes">My Recipes</Link>
-                    <Link to="#">
+                    <Link onClick={() => { setIsOpen(!isOpen) }} to="/">Home</Link>
+                    <Link onClick={() => { setIsOpen(!isOpen) }} to="/myrecipes">My Recipes</Link>
+                    <Link onClick={() => { setIsOpen(!isOpen) }}  to="#">
                         <div className="text-white bg-darkShade py-2 px-4 rounded-md">Login</div>
                     </Link>
                 </nav>: <></>}
