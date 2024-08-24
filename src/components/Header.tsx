@@ -1,22 +1,28 @@
 import { useState,useEffect } from "react"
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 type PropsType = {
-    handleSearchButton:(data:boolean)=>void;
+    handleSearchButton:(data:boolean,path:string)=>void;
 }
 
 const Header = ({handleSearchButton}:PropsType) => {
-
+    
+    const location = useLocation()
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [searchOpen, setSearchOpen] = useState<boolean>(false);
     // const [flag,setFlag] = useState<number>(0)
 
     const handleSearchOpen = ()=>{
         setSearchOpen(!searchOpen)
+        console.log(window.location.pathname)
     }
 
     useEffect(()=>{
-        handleSearchButton(searchOpen)
+        setSearchOpen(false)
+    },[location.pathname])
+
+    useEffect(()=>{
+        handleSearchButton(searchOpen,window.location.pathname)
     },[searchOpen])
     
     return (
