@@ -6,6 +6,8 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import MyRecipes from './pages/MyRecipes'
 import { useState } from 'react'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 
 function App() {
   
@@ -30,6 +32,14 @@ function App() {
           <Route
             path='/myrecipes'
             element={<MyRecipes searchButton={path==='/myrecipes'?searchOpen:false}/>}
+          ></Route>
+          <Route
+            path='/login'
+            element={<Login/>}
+          ></Route>
+          <Route
+            path='/signup'
+            element={<Signup/>}
           ></Route>
         </Routes>
       </div>
