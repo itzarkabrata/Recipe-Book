@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react"
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom';
+import { AnimatePresence,motion } from "framer-motion";
 
 type PropsType = {
     handleSearchButton:(data:boolean,path:string)=>void;
@@ -45,13 +46,15 @@ const Header = ({handleSearchButton}:PropsType) => {
                 <div className="md:hidden text-xl text-lightShade" onClick={() => { setIsOpen(!isOpen) }}>
                     <i className={isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
                 </div>
-                {isOpen ? <nav className="max-h-screen z-40 md:hidden text-lightShade flex flex-col items-start justify-around  w-full min-h-[170px] h-auto top-16 absolute right-0 bg-[#040418a1] font-medium pl-4 pb-2 rounded-b-lg transition-max-height transition-opacity overflow-hidden duration-1000 ease-in-out">
+                <AnimatePresence>
+                {isOpen ? <motion.nav initial={{opacity : 0,height : "0px"}} animate={{opacity:1,height:"170px"}} exit={{opacity:0}} className="max-h-screen z-40 md:hidden text-lightShade flex flex-col items-start justify-around  w-full min-h-[170px] h-auto top-16 absolute right-0 bg-[#040418a1] font-medium pl-4 pb-2 rounded-b-lg transition-max-height transition-opacity overflow-hidden duration-1000 ease-in-out">
                     <Link onClick={() => { setIsOpen(!isOpen) }} to="/">Home</Link>
                     <Link onClick={() => { setIsOpen(!isOpen) }} to="/myrecipes">My Recipes</Link>
                     <Link onClick={() => { setIsOpen(!isOpen) }}  to="#">
                         <div className="text-white bg-darkShade py-2 px-4 rounded-md">Login</div>
                     </Link>
-                </nav>: <></>}
+                </motion.nav>: <></>}
+                </AnimatePresence>
                 
 
                 <nav className="max-md:hidden text-darkShade flex items-center justify-between w-[250px] font-medium text-sm">

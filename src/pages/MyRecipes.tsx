@@ -43,7 +43,7 @@ function MyRecipes({ searchButton }: PropsType) {
   return (
     <div className="">
       <SearchBox searchShow={searchButton ? true : false} handleScrolltoDiv = {handleScrolltoDiv} />
-      <div
+      <div id="recipe-page-initial-bg"
         className="relative overflow-hidden bg-cover bg-no-repeat p-12 text-center"
         style={{ backgroundImage: `url(${Recipe_img})`, height: '100vh' }}>
         <div

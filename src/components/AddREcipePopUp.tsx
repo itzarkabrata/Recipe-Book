@@ -59,7 +59,7 @@ export default function AddREcipePopUp({ closeForm_AddRecipeComponent }: Props) 
         <AnimatePresence>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center backdrop-blur-md z-10">
 
-                <motion.form initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="bg-orange-100 w-11/12 sm:w-2/3 px-7 pt-4 pb-6 mt-16 rounded-xl h-max relative" encType="multipart/form-data" onSubmit={handleFormSubmit}  onReset={() => setrecipedata({
+                <motion.form initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="bg-orange-100 w-11/12 sm:w-2/3 px-7 pt-4 pb-6 mt-16 rounded-xl h-max relative aspect-auto" encType="multipart/form-data" onSubmit={handleFormSubmit}  onReset={() => setrecipedata({
                     recipe_id: Date.now(),
                     enlistDate: `${new Date().getDate()}-${new Date().getMonth() + 1}-${new Date().getFullYear()}`,
                     title: "",
