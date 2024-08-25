@@ -31,22 +31,21 @@ const Home = ({ searchButton }: PropsType) => {
 
     return () => clearTimeout(timer);
   }, [])
-
   
   const handleScrolltoDiv = () => {
-    setdivVisible(true)
+    setdivVisible(true);
     setTimeout(() => {
       if (targetDiv.current) {
         targetDiv.current.scrollIntoView({ behavior: "smooth" })
-        setTimeout(() => setheaderVisible(true), 200)
+        setTimeout(() =>setheaderVisible(true), 80)
       }
-    }, 500)
+    }, 200)
   }
 
   return (
     <div className="">
       <SearchBox searchShow={searchButton ? true : false} handleScrolltoDiv = {handleScrolltoDiv} />
-      <div
+      <div id="home-initial-bg"
         className="relative overflow-hidden bg-cover bg-no-repeat p-12 text-center"
         style={{ backgroundImage: `url(${Home_img})`, height: '100vh' }}>
         <div

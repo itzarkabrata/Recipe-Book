@@ -59,7 +59,7 @@ export default function AddREcipePopUp({ closeForm_AddRecipeComponent }: Props) 
         <AnimatePresence>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center backdrop-blur-md z-10">
 
-                <motion.form initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="bg-orange-100 w-11/12 sm:w-2/3 px-7 pt-4 pb-6 mt-16 rounded-xl h-max relative" encType="multipart/form-data" onSubmit={handleFormSubmit}  onReset={() => setrecipedata({
+                <motion.form initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="bg-orange-100 w-11/12 sm:w-2/3 px-7 pt-4 pb-6 mt-16 rounded-xl h-max relative aspect-auto" encType="multipart/form-data" onSubmit={handleFormSubmit}  onReset={() => setrecipedata({
                     recipe_id: Date.now(),
                     enlistDate: `${new Date().getDate()}-${new Date().getMonth() + 1}-${new Date().getFullYear()}`,
                     title: "",
@@ -96,7 +96,8 @@ export default function AddREcipePopUp({ closeForm_AddRecipeComponent }: Props) 
 
                         <div id="ingrediants-box" className="mb-2">
                             <label htmlFor="ingredients">Specify The ingredients</label><br />
-                            <input type="text" name="ingredients" value={recipedata.ingredients} onChange={handleInputFieldData} className="mt-1 px-3 py-2 w-full rounded-md border-yellow-400 border-2" required />
+                            <input type="text" name="ingredients" value={recipedata.ingredients} onChange={handleInputFieldData} className="mt-1 px-3 py-2 w-full rounded-md border-yellow-400 border-2" placeholder="Enter the ingredients" required /><br />
+                            <section className="text-xs sm:text-sm">Each ingredients must be comma (,) separated</section>
                         </div>
 
                         <div id="description-box" className="mb-2">
@@ -109,7 +110,7 @@ export default function AddREcipePopUp({ closeForm_AddRecipeComponent }: Props) 
                         </div>
 
                         <div id="action-buttons" className="mt-1 flex flex-row justify-end gap-8">
-                            <button type="submit" className="bg-yellow-400 px-3 py-2 rounded-lg">Submit</button>
+                            <button type="submit" className="bg-darkShade px-3 py-2 rounded-lg text-white">Submit</button>
                             <button type="reset" className="bg-blue-200 px-3 py-2 rounded-lg">Reset</button>
                         </div>
 
