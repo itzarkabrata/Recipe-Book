@@ -5,7 +5,7 @@
       "title": "Spaghetti Bolognese",
       "description": "Spaghetti Bolognese is a hearty Italian pasta dish featuring a rich, slow-cooked meat sauce. The sauce is made with minced beef, onions, garlic, carrots, and celery, all simmered in a tomato base. Olive oil is used to sauté the vegetables, and the beef is browned for extra flavor. The mixture is simmered to allow the flavors to meld, creating a deep, savory taste. Served over al dente spaghetti and topped with Parmesan cheese, this dish is comforting, filling, and perfect for family dinners or cozy nights at home.",
       "ingredients": ["spaghetti", "minced beef", "onion", "garlic", "tomato sauce", "olive oil", "carrot", "celery"],
-      "image_url": "https://example.com/spaghetti.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Italian"
     },
     {
@@ -13,7 +13,7 @@
       "title": "Chicken Tikka Masala",
       "description": "Chicken Tikka Masala is a flavorful Indian dish featuring marinated chicken cooked in a creamy, spiced tomato sauce. The chicken is marinated in yogurt and spices like garam masala, cumin, and turmeric, then grilled for a smoky flavor. The sauce combines tomatoes, onions, garlic, ginger, and heavy cream, creating a rich and smooth texture. The dish is served with basmati rice or naan bread, making it perfect for soaking up the sauce. Chicken Tikka Masala is a popular favorite due to its blend of vibrant spices and creamy, comforting consistency.",
       "ingredients": ["chicken breast", "yogurt", "garam masala", "tomatoes", "onions", "garlic", "ginger", "cream"],
-      "image_url": "https://example.com/chicken_tikka_masala.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Indian"
     },
     {
@@ -21,7 +21,7 @@
       "title": "Beef Tacos",
       "description": "Beef Tacos are a delicious Mexican dish featuring seasoned ground beef served in soft or hard tortillas. The beef is cooked with taco seasoning, giving it a savory, spicy flavor. Fresh toppings like lettuce, tomatoes, shredded cheese, and sour cream are added to complete the tacos. This dish is incredibly versatile and can be customized with a variety of toppings like guacamole, salsa, or jalapeños. Beef tacos are perfect for family meals, gatherings, or even a quick weeknight dinner, offering a flavorful, satisfying option that’s easy to prepare and enjoy.",
       "ingredients": ["ground beef", "taco seasoning", "tortillas", "lettuce", "tomatoes", "cheese", "sour cream"],
-      "image_url": "https://example.com/beef_tacos.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Mexican"
     },
     {
@@ -29,7 +29,7 @@
       "title": "Greek Salad",
       "description": "Greek Salad is a refreshing and healthy dish featuring a blend of fresh vegetables like cucumbers, tomatoes, onions, and olives, all tossed together with feta cheese and olive oil. The salad is lightly seasoned with oregano and salt, making it a simple yet flavorful option. It’s often served as a side dish with grilled meats or enjoyed on its own. The combination of crisp vegetables, salty feta, and tangy olives makes it a perfect choice for hot days or as a light, nutritious meal at any time.",
       "ingredients": ["cucumber", "tomato", "red onion", "feta cheese", "olive oil", "olives", "oregano"],
-      "image_url": "https://example.com/greek_salad.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Mediterranean"
     },
     {
@@ -37,7 +37,7 @@
       "title": "Pancakes",
       "description": "Pancakes are a classic breakfast dish made from a simple batter of flour, eggs, milk, and baking powder. The batter is cooked on a griddle until golden brown, creating light and fluffy pancakes. They are often served with butter and syrup, but can also be topped with fruits, whipped cream, or nuts for added flavor. Pancakes are a versatile dish that can be sweet or savory depending on the toppings. Perfect for a lazy weekend morning, they are a comforting and filling way to start the day.",
       "ingredients": ["flour", "eggs", "milk", "baking powder", "butter", "syrup"],
-      "image_url": "https://example.com/pancakes.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Breakfast"
     },
     {
@@ -45,7 +45,7 @@
       "title": "Margherita Pizza",
       "description": "Margherita Pizza is a simple yet delicious pizza made with a thin crust topped with fresh tomato sauce, mozzarella cheese, and basil leaves. The combination of tangy tomatoes, creamy cheese, and fragrant basil creates a classic flavor that’s hard to resist. Baked to perfection in a hot oven, the crust becomes crispy while the cheese melts into the sauce. This pizza is a favorite for those who appreciate minimal ingredients that allow each flavor to shine. It’s perfect for a quick weeknight dinner or a casual weekend meal.",
       "ingredients": ["pizza dough", "tomato sauce", "mozzarella", "basil", "olive oil"],
-      "image_url": "https://example.com/margherita_pizza.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Italian"
     },
     {
@@ -53,7 +53,7 @@
       "title": "Caesar Salad",
       "description": "Caesar Salad is a classic, flavorful salad made with crisp romaine lettuce, croutons, and Parmesan cheese. It’s tossed in a creamy dressing made from anchovies, garlic, lemon juice, and olive oil. The salad is often garnished with grilled chicken or shrimp for added protein. The tangy, savory dressing is what sets Caesar Salad apart from other salads, giving it a rich, robust taste. This salad is perfect as a side dish or a light main course, making it a versatile option for any meal.",
       "ingredients": ["romaine lettuce", "croutons", "Parmesan cheese", "Caesar dressing", "anchovies"],
-      "image_url": "https://example.com/caesar_salad.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Salad"
     },
     {
@@ -61,7 +61,7 @@
       "title": "Grilled Cheese Sandwich",
       "description": "A Grilled Cheese Sandwich is a simple, comforting meal made by grilling slices of bread with a generous amount of melted cheese in between. The sandwich is crispy on the outside and gooey on the inside, making it the perfect comfort food. The choice of cheese can vary, but cheddar is a common favorite. It’s often served with a side of tomato soup for dipping. This sandwich is quick to make and satisfying, ideal for lunch or a light dinner. Kids and adults alike love this timeless classic.",
       "ingredients": ["bread", "cheddar cheese", "butter"],
-      "image_url": "https://example.com/grilled_cheese.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Lunch"
     },
     {
@@ -69,7 +69,7 @@
       "title": "Chicken Caesar Wrap",
       "description": "The Chicken Caesar Wrap combines the delicious flavors of a Caesar salad with the convenience of a wrap. Grilled chicken, romaine lettuce, Parmesan cheese, and Caesar dressing are all rolled up in a soft tortilla, making this dish portable and easy to eat on the go. The creamy dressing and tender chicken make each bite satisfying. This wrap is perfect for a quick lunch or a light dinner. It offers a refreshing and nutritious option without compromising on flavor, making it a popular choice for busy days.",
       "ingredients": ["tortilla", "grilled chicken", "romaine lettuce", "Caesar dressing", "Parmesan cheese"],
-      "image_url": "https://example.com/chicken_caesar_wrap.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Wrap"
     },
     {
@@ -77,7 +77,7 @@
       "title": "Lentil Soup",
       "description": "Lentil Soup is a hearty and nutritious dish made from lentils, vegetables, and a variety of herbs and spices. The lentils are simmered until soft, creating a rich, earthy flavor that pairs well with the carrots, onions, and garlic. This soup is often spiced with cumin and paprika, giving it a warm, comforting taste. It’s a great vegetarian option that’s high in protein and fiber. Lentil Soup is perfect for a chilly day or as a filling lunch. Serve it with crusty bread for a complete meal.",
       "ingredients": ["lentils", "carrots", "onions", "garlic", "cumin", "paprika"],
-      "image_url": "https://example.com/lentil_soup.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Soup"
     },
     {
@@ -85,7 +85,7 @@
       "title": "Vegetable Stir-Fry",
       "description": "Vegetable Stir-Fry is a quick and healthy dish made by sautéing fresh vegetables in a hot pan with a savory sauce. Common vegetables used include bell peppers, broccoli, carrots, and snap peas. The stir-fry is flavored with soy sauce, garlic, and ginger, giving it a bold, umami taste. This dish is versatile and can be served over rice or noodles for a complete meal. It’s perfect for those looking for a nutritious, easy-to-make dinner. The crisp-tender vegetables and flavorful sauce make it a satisfying option for vegetarians and non-vegetarians alike.",
       "ingredients": ["bell peppers", "broccoli", "carrots", "soy sauce", "garlic", "ginger"],
-      "image_url": "https://example.com/vegetable_stirfry.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Asian"
     },
     {
@@ -93,7 +93,7 @@
       "title": "French Toast",
       "description": "French Toast is a classic breakfast dish made from bread soaked in a mixture of eggs, milk, and cinnamon, then fried to golden perfection. The outside is crispy, while the inside remains soft and custardy. French Toast is often served with syrup, powdered sugar, and fresh fruit. It’s a sweet and indulgent way to start the day, perfect for weekend brunches or special occasions. The dish can be made with any type of bread, though thicker slices like brioche or challah are preferred for their rich texture.",
       "ingredients": ["bread", "eggs", "milk", "cinnamon", "syrup"],
-      "image_url": "https://example.com/french_toast.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Breakfast"
     },
     {
@@ -101,7 +101,7 @@
       "title": "Caprese Salad",
       "description": "Caprese Salad is a simple and fresh Italian dish made with slices of ripe tomatoes, fresh mozzarella, and basil leaves. Drizzled with olive oil and balsamic vinegar, this salad is light, flavorful, and refreshing. It’s the perfect dish for summer when tomatoes are at their peak. The combination of sweet tomatoes, creamy mozzarella, and fragrant basil is a true celebration of classic Italian flavors. Caprese Salad is often served as an appetizer or side dish, but it can also be enjoyed on its own as a light meal.",
       "ingredients": ["tomatoes", "mozzarella", "basil", "olive oil", "balsamic vinegar"],
-      "image_url": "https://example.com/caprese_salad.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Italian"
     },
     {
@@ -109,7 +109,7 @@
       "title": "Beef Stroganoff",
       "description": "Beef Stroganoff is a rich and creamy Russian dish made with tender strips of beef, sautéed mushrooms, onions, and a sour cream sauce. The beef is cooked until tender, and the sauce is seasoned with mustard and paprika for added flavor. This comforting dish is traditionally served over egg noodles or rice, making it a filling and satisfying meal. Beef Stroganoff is perfect for a cozy dinner on a chilly night, with its combination of savory flavors and creamy texture. It’s a family favorite that’s sure to impress.",
       "ingredients": ["beef", "mushrooms", "onions", "sour cream", "mustard", "paprika"],
-      "image_url": "https://example.com/beef_stroganoff.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Russian"
     },
     {
@@ -117,7 +117,7 @@
       "title": "Chicken Alfredo",
       "description": "Chicken Alfredo is a creamy and delicious pasta dish made with fettuccine noodles, grilled chicken, and a rich Alfredo sauce. The sauce is made from butter, cream, and Parmesan cheese, creating a smooth and velvety texture. The grilled chicken adds a savory element that complements the rich sauce. This dish is perfect for a special dinner or when you’re craving something indulgent. Chicken Alfredo is a crowd-pleaser that can be easily customized with vegetables like broccoli or mushrooms, making it a versatile option for any occasion.",
       "ingredients": ["fettuccine", "chicken breast", "butter", "cream", "Parmesan cheese"],
-      "image_url": "https://example.com/chicken_alfredo.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Italian"
     },
     {
@@ -125,7 +125,7 @@
       "title": "Shrimp Scampi",
       "description": "Shrimp Scampi is a quick and flavorful Italian-American dish featuring sautéed shrimp in a garlic, butter, and white wine sauce. The shrimp are cooked until tender and juicy, and the sauce is finished with lemon juice and parsley for a bright, fresh flavor. This dish is typically served over pasta or with crusty bread to soak up the sauce. Shrimp Scampi is a perfect option for a light yet satisfying dinner, offering a combination of savory, buttery flavors with the delicate taste of shrimp.",
       "ingredients": ["shrimp", "garlic", "butter", "white wine", "lemon", "parsley"],
-      "image_url": "https://example.com/shrimp_scampi.jpg",
+      "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
       "category": "Seafood"
     }
   ]

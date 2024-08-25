@@ -2,15 +2,18 @@ import { useState } from "react";
 
 interface PropsType {
     searchShow : boolean
+    handleScrolltoDiv : ()=>void
     // onsubmit : (data:string)=>void
 }
-const SearchBox = ({searchShow}:PropsType) => {
-    const [formData,setFormData] = useState<string>("")
+const SearchBox = ({searchShow,handleScrolltoDiv}:PropsType) => {
+    const [formData,setFormData] = useState<string>("")    
 
     
     const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
         console.log(formData);
+        setFormData("")
+        handleScrolltoDiv()        
     }
     return (
         <>

@@ -13,9 +13,16 @@ const Header = ({handleSearchButton}:PropsType) => {
     // const [flag,setFlag] = useState<number>(0)
 
     const handleSearchOpen = ()=>{
-        setSearchOpen(!searchOpen)
+        setSearchOpen(true)
         console.log(window.location.pathname)
     }
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
 
     useEffect(()=>{
         setSearchOpen(false)
@@ -28,7 +35,7 @@ const Header = ({handleSearchButton}:PropsType) => {
     return (
         <div className="w-full px-4 min-h-16 shadow-md flex max-md:flex-row-reverse items-center justify-between sticky top-0 z-50 bg-slate-200">
 
-            <div className=" cursor-pointer text-xl text-lightShade" title="Search Here" onClick={handleSearchOpen}><i className="fa-solid fa-magnifying-glass"></i></div>
+            <div className=" cursor-pointer text-xl text-lightShade" title="Search Here" onClick={()=>{handleSearchOpen();scrollToTop()}}><i className="fa-solid fa-magnifying-glass"></i></div>
             <div id="logo" className=" font-semibold text-2xl md:ml-48">
                 <span className="text-darkShade">Recipe </span><span className="text-lightShade">Book</span>
             </div>
