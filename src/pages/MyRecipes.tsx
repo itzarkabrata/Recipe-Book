@@ -45,7 +45,7 @@ function MyRecipes({ searchButton }: PropsType) {
       <SearchBox searchShow={searchButton ? true : false} handleScrolltoDiv = {handleScrolltoDiv} />
       <div
         className="relative overflow-hidden bg-cover bg-no-repeat p-12 text-center"
-        style={{ backgroundImage: `url(${Recipe_img})`, height: '660px' }}>
+        style={{ backgroundImage: `url(${Recipe_img})`, height: '100vh' }}>
         <div
           className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed bg-gradient-overlay-1"
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
