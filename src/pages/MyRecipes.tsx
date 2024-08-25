@@ -33,12 +33,15 @@ function MyRecipes({ searchButton }: PropsType) {
 
   const handleScrolltoDiv = () => {
     setdivVisible(true)
+    console.log(1)
     setTimeout(() => {
+      console.log(2)
       if (targetDiv.current) {
         targetDiv.current.scrollIntoView({ behavior: "smooth" })
-        setTimeout(() => setheaderVisible(true), 200)
+        setTimeout(() => {setheaderVisible(true);console.log(3)}, 300)
       }
-    }, 500)
+    }, 1)
+    console.log(4)
   }
   return (
     <div className="">
@@ -49,7 +52,7 @@ function MyRecipes({ searchButton }: PropsType) {
         <div
           className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed bg-gradient-overlay-1"
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
-          <div className=" h-full flex flex-col justify-center items-center text-white gap-10">
+          <div className=" h-full flex flex-col justify-center items-center text-white gap-52">
 
             <span className={`mb-4 px-2 max-sm:text-3xl max-md:text-4xl text-5xl font-semibold transition-opacity ease-in duration-[1500ms] ${isVisible ? "opacity-100" : "opacity-0"}`}>Explore New Flavors: Your Go-To Recipe Collection</span>
 
