@@ -92,7 +92,7 @@ function MyRecipes({ searchButton }: PropsType) {
             <div className="flex items-center justify-start py-10 px-8 max-sm:px-4 ">
               <div className="text-lg max-sm:text-sm border-solid text-white border-[2px] px-5 py-3 rounded-full">{getRecipeData_ForMyRecipePage.length} recipes found</div>
             </div>
-            <div id="recipe-list" className="grid justify-center items-center grid-cols-2 gap-10 px-5 sm:px-10 md:px-14 xl:px-20 py-10">
+            <div id="recipe-list" className="grid justify-center items-center grid-cols-2 lg:grid-cols-3 gap-6 px-5 sm:px-10 md:px-14 xl:px-20 py-10">
               {Data.recipes.map((item: RecipeDatatype) => {
                 return <div key={item.recipe_id}><RecipeCards dataobj={item} /></div>
               })}
