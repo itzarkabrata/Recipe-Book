@@ -31,7 +31,7 @@ export default function AddREcipePopUp({ closeForm_AddRecipeComponent }: Props) 
         closeForm_AddRecipeComponent(false);
     }
 
-    const handleInputFieldData = (e: React.ChangeEvent<HTMLInputElement>):void => {
+    const handleInputFieldData = (e: React.ChangeEvent<HTMLInputElement>): void => {
         let name: string = e.target.name;
         let value: string = e.target.value;
 
@@ -44,13 +44,13 @@ export default function AddREcipePopUp({ closeForm_AddRecipeComponent }: Props) 
 
     }
 
-    const handleTextareaData = (e: React.ChangeEvent<HTMLTextAreaElement>):void => {
+    const handleTextareaData = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
         let name: string = e.target.name;
         let value: string = e.target.value;
         setrecipedata({ ...recipedata, [name]: value });
     }
 
-    const handleFormSubmit = (e:React.FormEvent<HTMLFormElement>):void=>{
+    const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
         console.log(recipedata);
     }
@@ -59,7 +59,7 @@ export default function AddREcipePopUp({ closeForm_AddRecipeComponent }: Props) 
         <AnimatePresence>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center backdrop-blur-md z-10">
 
-                <motion.form initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="bg-orange-100 w-11/12 sm:w-2/3 px-7 pt-4 pb-6 mt-16 rounded-xl h-max relative aspect-auto" encType="multipart/form-data" onSubmit={handleFormSubmit}  onReset={() => setrecipedata({
+                <motion.form initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="bg-orange-100 w-11/12 sm:w-2/3 px-7 pt-4 pb-6 mt-16 rounded-xl h-max relative aspect-auto" encType="multipart/form-data" onSubmit={handleFormSubmit} onReset={() => setrecipedata({
                     recipe_id: Date.now(),
                     enlistDate: `${new Date().getDate()}-${new Date().getMonth() + 1}-${new Date().getFullYear()}`,
                     title: "",
@@ -104,16 +104,16 @@ export default function AddREcipePopUp({ closeForm_AddRecipeComponent }: Props) 
                             <label htmlFor="description">Procedural Description</label><br />
                             <textarea name="description" className="w-full h-32 mt-1 p-3 rounded-md border-yellow-400 border-2" placeholder="Enter the procedure" value={recipedata.description} onChange={handleTextareaData} required></textarea>
                         </div>
+                        <div className="flex flex-col lg:flex-row justify-center items-center gap-0 lg:gap-4">
+                            <div id="image" className="mb-2 w-full lg:w-3/4">
+                                <input type="file" name="image_url" value={recipedata.image_url} onChange={handleInputFieldData} className="mt-1 px-3 py-2 w-full lg:w-[85%] rounded-md border-yellow-400 border-2" required />
+                            </div>
 
-                        <div id="image" className="mb-2">
-                            <input type="file" name="image_url" value={recipedata.image_url} onChange={handleInputFieldData} className="mt-1 px-3 py-2 w-full md::w-1/2 rounded-md border-yellow-400 border-2" required />
+                            <div id="action-buttons" className="mt-1 flex flex-row justify-start lg:justify-end gap-8 w-full lg:w-1/4">
+                                <button type="submit" className="bg-darkShade px-3 py-2 rounded-lg text-white">Submit</button>
+                                <button type="reset" className="bg-blue-200 px-3 py-2 rounded-lg">Reset</button>
+                            </div>
                         </div>
-
-                        <div id="action-buttons" className="mt-1 flex flex-row justify-end gap-8">
-                            <button type="submit" className="bg-darkShade px-3 py-2 rounded-lg text-white">Submit</button>
-                            <button type="reset" className="bg-blue-200 px-3 py-2 rounded-lg">Reset</button>
-                        </div>
-
                     </div>
                 </motion.form>
 
