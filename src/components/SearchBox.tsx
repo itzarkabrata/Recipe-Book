@@ -74,7 +74,7 @@ const SearchBox = ({ searchShow, handleScrolltoDiv }: PropsType) => {
 
                 // fetch call here...
 
-                // will fetch all datas from database
+                // will fetch all datas(title,image) from database
                 dispatch(addRecipeData(Data.recipes));
                 setSeachListData(Data.recipes);
 
@@ -82,7 +82,7 @@ const SearchBox = ({ searchShow, handleScrolltoDiv }: PropsType) => {
 
                 // fetch call here...
 
-                // will fetch only the recipes that the user added
+                // will fetch only the recipes(title,image) that the user added
                 dispatch(addRecipeData(UserRecipeData.recipes));
                 setSeachListData(UserRecipeData.recipes);
             }
