@@ -1,23 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Login_bg from '../assets/images/login_bg.jpg'
 
 const Login = () => {
   const [Password, setPassword] = useState<string>('')
   const [showPassword, setShowPassword] = useState<boolean>(false)
+  const [show,setShow] = useState<boolean>(false)
 
   const toggleEye = ()=>{
     setShowPassword(!showPassword)
   }
 
+  useEffect(()=>{
+    setTimeout(()=>setShow(true),100)
+  },[])
+
+
   return (
-    <div id='container' className=' flex items-center mb-20 justify-center'>
-      <div id="login" className=' mt-10 rounded-lg bg-white h-[450px] w-[320px] max-sm:w-[90%] max-sm:max-w-[356px] text-darkShade shadow-[0_10px_30px_rgba(0,0,0,0.4)]'>
+    <div id='container' className='flex items-center justify-center h-full' style={{backgroundImage:`url(${Login_bg})`,height:"100vh"}}>
+      <div id="login" className={` mt-10 mb-10 rounded-lg  bg-orange-100 h-[450px] w-[320px] max-sm:w-[90%] max-sm:max-w-[356px] text-darkShade shadow-[0_10px_30px_rgba(0,0,0,0.4)] transition-opacity duration-[600ms] ease-in ${show ? "opacity-100":"opacity-0"}`}>
         <h2 className='text-2xl pt-4 pl-4 font-semibold'>Sign In</h2>
         <form id="input-section" className='flex flex-col mt-4'>
-          <div id="input" className='flex flex-col p-3 gap-2'>
+          <div id="input" className='flex flex-col p-3 gap-2 font-medium'>
             <span>Email</span>
             <input type="email" placeholder='you@example.com' className='p-2 focus:outline-none focus:border-lightShade border-gray-300 w-full border-[1px] focus:border-2 rounded-lg' /></div>
-          <div id="input" className='flex flex-col p-3 gap-2'>
+          <div id="input" className='flex flex-col p-3 gap-2 font-medium'>
             <span>Password</span>
             <div className='relative'>
             <input type={showPassword ? "text" : "password"} 
@@ -35,7 +42,7 @@ const Login = () => {
 
         </form>
         <span className='pl-4'>
-          Don't have account <Link to='/signup' className='text-darkShade font-bold'>Sign Up</Link>
+          Don't have account <Link to='/signup' onClick={()=>{window.scrollTo({top:0})}} className='text-darkShade font-bold'>Sign Up</Link>
         </span>
       </div>
     </div>
