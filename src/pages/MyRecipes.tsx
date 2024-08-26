@@ -3,6 +3,7 @@ import Recipe_img from "../assets/images/my_recipe.jpg"
 import RecipeCards from "../components/RecipeCards";
 import SearchBox from "../components/SearchBox";
 import AddRecipeButton from "../components/AddRecipeButton";
+import UserRecipeData from "../assets/sample_data/user_recipe.json";
 import Data from "../assets/sample_data/recipe.json";
 
 interface PropsType {
@@ -19,10 +20,15 @@ interface RecipeDatatype {
 }
 
 function MyRecipes({ searchButton }: PropsType) {
+
+
   const targetDiv = useRef<HTMLDivElement | null>(null)
   const [isVisible, setisVisible] = useState<boolean>(false)
   const [headerVisible, setheaderVisible] = useState<boolean>(false)
   const [divVisible, setdivVisible] = useState<boolean>(false)
+  const [getRecipeData_ForMyRecipePage , setgetRecipeData_ForMyRecipePage] = useState<RecipeDatatype[]>([]);
+
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setisVisible(true)
@@ -31,17 +37,33 @@ function MyRecipes({ searchButton }: PropsType) {
     return () => clearTimeout(timer);
   }, [])
 
-  const handleScrolltoDiv = () => {
+  const handleScrolltoDiv = (data:string|null) => {
+
+    //if null is passed i.e user just presses on EXPLORE NOW then all recipes from database are fetched
+    if(data===null){
+
+      // api call from database for getting all recipes that are added by that user
+
+      setgetRecipeData_ForMyRecipePage(UserRecipeData.recipes);
+
+    }
+    //else if a title is passed then all recipes that matches the title will be fetched
+    else{
+
+      // api call from database for getting specific recipies of the user that matches "data" 
+
+      setgetRecipeData_ForMyRecipePage(UserRecipeData.recipes);
+      
+    }
+
+
     setdivVisible(true)
-    console.log(1)
     setTimeout(() => {
-      console.log(2)
       if (targetDiv.current) {
         targetDiv.current.scrollIntoView({ behavior: "smooth" })
-        setTimeout(() => {setheaderVisible(true);console.log(3)}, 300)
+        setTimeout(() => {setheaderVisible(true)}, 80)
       }
-    }, 1)
-    console.log(4)
+    }, 200)
   }
   return (
     <div className="">
@@ -56,7 +78,7 @@ function MyRecipes({ searchButton }: PropsType) {
 
             <span className={`mb-4 px-2 max-sm:text-3xl max-md:text-4xl text-5xl font-semibold transition-opacity ease-in duration-[1500ms] ${isVisible ? "opacity-100" : "opacity-0"}`}>Explore New Flavors: Your Go-To Recipe Collection</span>
 
-            <button onClick={handleScrolltoDiv} className={`flex flex-row items-center rounded-lg hover:bg-slate-200 hover:bg-opacity-10 gap-2 border-solid border-[3px] py-3 px-6 transition-opacity ease-in duration-[1500ms] ${isVisible ? "opacity-100" : "opacity-0"}`}>
+            <button onClick={()=>handleScrolltoDiv(null)} className={`flex flex-row items-center rounded-lg hover:bg-slate-200 hover:bg-opacity-10 gap-2 border-solid border-[3px] py-3 px-6 transition-opacity ease-in duration-[1500ms] ${isVisible ? "opacity-100" : "opacity-0"}`}>
               <span className="text-sm sm:text-lg">Explore Now</span>
               <i className="fa-solid fa-arrow-right"></i>
             </button>
@@ -68,7 +90,7 @@ function MyRecipes({ searchButton }: PropsType) {
           <div ref={targetDiv} className={`bg-gradient-overlay-2 flex flex-col pt-24 transition-opacity ease-in duration-[800ms] ${headerVisible ? "opacity-100" : "opacity-0"}`}>
             <h2 className={`text-5xl max-sm:text-3xl font-semibold text-white text-center`}>My Recipes</h2>
             <div className="flex items-center justify-start py-10 px-8 max-sm:px-4 ">
-              <div className="text-lg max-sm:text-sm border-solid text-white border-[2px] px-5 py-3 rounded-full">10 recipes found</div>
+              <div className="text-lg max-sm:text-sm border-solid text-white border-[2px] px-5 py-3 rounded-full">{getRecipeData_ForMyRecipePage.length} recipes found</div>
             </div>
             <div id="recipe-list" className="grid justify-center items-center grid-cols-2 gap-10 px-5 sm:px-10 md:px-14 xl:px-20 py-10">
               {Data.recipes.map((item: RecipeDatatype) => {
