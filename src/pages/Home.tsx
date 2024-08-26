@@ -22,6 +22,7 @@ const Home = ({ searchButton }: PropsType) => {
   const [isVisible, setisVisible] = useState<boolean>(false)
   const [headerVisible, setheaderVisible] = useState<boolean>(false)
   const [divVisible, setdivVisible] = useState<boolean>(false)
+  const [getRecipeData_ForHomeScreen , setgetRecipeData_ForHomeScreen] = useState<RecipeDatatype[]>([]);
   
   
   useEffect(() => {
@@ -32,7 +33,28 @@ const Home = ({ searchButton }: PropsType) => {
     return () => clearTimeout(timer);
   }, [])
   
-  const handleScrolltoDiv = () => {
+
+
+  // if user searches something then a string value will be passed and if user just hits the explore button then a null is passed
+  const handleScrolltoDiv = (data : string | null) => {
+
+    //if null is passed i.e user just presses on EXPLORE NOW then all recipes from database are fetched
+    if(data===null){
+
+      // api call from database for getting recipes for home screen
+
+      setgetRecipeData_ForHomeScreen(Data.recipes);
+
+    }
+    //else if a title is passed then all recipes that matches the title will be fetched
+    else{
+
+      // api call from database for getting recipes for home screen
+
+      setgetRecipeData_ForHomeScreen(Data.recipes);
+      
+    }
+
     setdivVisible(true);
     setTimeout(() => {
       if (targetDiv.current) {
@@ -55,7 +77,7 @@ const Home = ({ searchButton }: PropsType) => {
 
             <span className={`mb-4 px-2 max-sm:text-3xl max-md:text-4xl text-5xl font-semibold transition-opacity ease-in duration-[1500ms] ${isVisible ? "opacity-100" : "opacity-0"}`}>Discover Delicious Recipes for Every Occasion</span>
 
-            <button onClick={handleScrolltoDiv} className={`flex flex-row items-center rounded-lg hover:bg-slate-200 hover:bg-opacity-10 gap-2 border-solid border-[3px] py-3 px-6 transition-opacity ease-in duration-[1500ms] ${isVisible ? "opacity-100" : "opacity-0"}`}>
+            <button onClick={()=>handleScrolltoDiv(null)} className={`flex flex-row items-center rounded-lg hover:bg-slate-200 hover:bg-opacity-10 gap-2 border-solid border-[3px] py-3 px-6 transition-opacity ease-in duration-[1500ms] ${isVisible ? "opacity-100" : "opacity-0"}`}>
               <span className="text-sm sm:text-lg">Explore Now</span>
               <i className="fa-solid fa-arrow-right"></i>
             </button>
@@ -67,10 +89,10 @@ const Home = ({ searchButton }: PropsType) => {
         <div ref={targetDiv} className={`bg-gradient-overlay-2 flex flex-col pt-24 transition-opacity ease-in duration-[800ms] ${headerVisible ? "opacity-100" : "opacity-0"}`}>
           <h2 className={`text-5xl max-sm:text-3xl font-semibold text-white text-center`}>Featured Recipes</h2>
           <div className="flex items-center justify-start py-10 px-8 max-sm:px-4 ">
-            <div className="text-lg max-sm:text-sm border-solid text-white border-[2px] px-5 py-3 rounded-full">10 recipes found</div>
+            <div className="text-lg max-sm:text-sm border-solid text-white border-[2px] px-5 py-3 rounded-full">{getRecipeData_ForHomeScreen.length} Recipes Found</div>
           </div>
           <div id="recipe-list" className="grid justify-center items-end grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 sm:px-10 md:px-14 xl:px-20 py-10">
-            {Data.recipes.map((item: RecipeDatatype) => {
+            {getRecipeData_ForHomeScreen.map((item: RecipeDatatype) => {
               return <div key={item.recipe_id}><RecipeCards dataobj={item} /></div>
             })}
           </div>

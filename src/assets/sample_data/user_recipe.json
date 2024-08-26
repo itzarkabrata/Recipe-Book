@@ -1,0 +1,52 @@
+{
+    "recipes":[
+      {
+        "recipe_id": 1,
+        "title": "Spaghetti Bolognese",
+        "description": "Spaghetti Bolognese is a hearty Italian pasta dish featuring a rich, slow-cooked meat sauce. The sauce is made with minced beef, onions, garlic, carrots, and celery, all simmered in a tomato base. Olive oil is used to sauté the vegetables, and the beef is browned for extra flavor. The mixture is simmered to allow the flavors to meld, creating a deep, savory taste. Served over al dente spaghetti and topped with Parmesan cheese, this dish is comforting, filling, and perfect for family dinners or cozy nights at home.",
+        "ingredients": ["spaghetti", "minced beef", "onion", "garlic", "tomato sauce", "olive oil", "carrot", "celery"],
+        "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
+        "category": "Italian"
+      },
+      {
+        "recipe_id": 2,
+        "title": "Chicken Tikka Masala",
+        "description": "Chicken Tikka Masala is a flavorful Indian dish featuring marinated chicken cooked in a creamy, spiced tomato sauce. The chicken is marinated in yogurt and spices like garam masala, cumin, and turmeric, then grilled for a smoky flavor. The sauce combines tomatoes, onions, garlic, ginger, and heavy cream, creating a rich and smooth texture. The dish is served with basmati rice or naan bread, making it perfect for soaking up the sauce. Chicken Tikka Masala is a popular favorite due to its blend of vibrant spices and creamy, comforting consistency.",
+        "ingredients": ["chicken breast", "yogurt", "garam masala", "tomatoes", "onions", "garlic", "ginger", "cream"],
+        "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
+        "category": "Indian"
+      },
+      {
+        "recipe_id": 3,
+        "title": "Beef Tacos",
+        "description": "Beef Tacos are a delicious Mexican dish featuring seasoned ground beef served in soft or hard tortillas. The beef is cooked with taco seasoning, giving it a savory, spicy flavor. Fresh toppings like lettuce, tomatoes, shredded cheese, and sour cream are added to complete the tacos. This dish is incredibly versatile and can be customized with a variety of toppings like guacamole, salsa, or jalapeños. Beef tacos are perfect for family meals, gatherings, or even a quick weeknight dinner, offering a flavorful, satisfying option that’s easy to prepare and enjoy.",
+        "ingredients": ["ground beef", "taco seasoning", "tortillas", "lettuce", "tomatoes", "cheese", "sour cream"],
+        "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
+        "category": "Mexican"
+      },
+      {
+        "recipe_id": 4,
+        "title": "Greek Salad",
+        "description": "Greek Salad is a refreshing and healthy dish featuring a blend of fresh vegetables like cucumbers, tomatoes, onions, and olives, all tossed together with feta cheese and olive oil. The salad is lightly seasoned with oregano and salt, making it a simple yet flavorful option. It’s often served as a side dish with grilled meats or enjoyed on its own. The combination of crisp vegetables, salty feta, and tangy olives makes it a perfect choice for hot days or as a light, nutritious meal at any time.",
+        "ingredients": ["cucumber", "tomato", "red onion", "feta cheese", "olive oil", "olives", "oregano"],
+        "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
+        "category": "Mediterranean"
+      },
+      {
+        "recipe_id": 5,
+        "title": "Pancakes",
+        "description": "Pancakes are a classic breakfast dish made from a simple batter of flour, eggs, milk, and baking powder. The batter is cooked on a griddle until golden brown, creating light and fluffy pancakes. They are often served with butter and syrup, but can also be topped with fruits, whipped cream, or nuts for added flavor. Pancakes are a versatile dish that can be sweet or savory depending on the toppings. Perfect for a lazy weekend morning, they are a comforting and filling way to start the day.",
+        "ingredients": ["flour", "eggs", "milk", "baking powder", "butter", "syrup"],
+        "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
+        "category": "Breakfast"
+      },
+      {
+        "recipe_id": 6,
+        "title": "Margherita Pizza",
+        "description": "Margherita Pizza is a simple yet delicious pizza made with a thin crust topped with fresh tomato sauce, mozzarella cheese, and basil leaves. The combination of tangy tomatoes, creamy cheese, and fragrant basil creates a classic flavor that’s hard to resist. Baked to perfection in a hot oven, the crust becomes crispy while the cheese melts into the sauce. This pizza is a favorite for those who appreciate minimal ingredients that allow each flavor to shine. It’s perfect for a quick weeknight dinner or a casual weekend meal.",
+        "ingredients": ["pizza dough", "tomato sauce", "mozzarella", "basil", "olive oil"],
+        "image_url": "https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg",
+        "category": "Italian"
+      }
+    ]
+  }
