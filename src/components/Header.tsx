@@ -49,7 +49,7 @@ const Header = ({handleSearchButton}:PropsType) => {
                 <div className="md:hidden text-xl text-lightShade" onClick={handleHamburger}>
                     <i className={isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
                 </div>
-                <nav className={`${isOpen?"opacity-100 max-h-screen":"opacity-0 max-h-0"} z-40 md:hidden text-lightShade flex flex-col items-start justify-around  w-full min-h-[170px] h-auto top-16 absolute right-0 bg-[#040418a1] font-medium pl-4 pb-2 rounded-b-lg transition-all overflow-hidden duration-[800ms] ease-in-out`}>
+                <nav className={`${isOpen?"opacity-100 max-h-screen z-40":" hidden opacity-0 max-h-0 z-0"} md:hidden text-lightShade flex flex-col items-start justify-around  w-full min-h-[170px] h-auto top-16 absolute right-0 bg-[#040418a1] font-medium pl-4 pb-2 rounded-b-lg transition-all overflow-hidden duration-[800ms] ease-in-out`}>
                     <Link onClick={() => { setIsOpen(!isOpen) }} to="/">Home</Link>
                     <Link onClick={() => { setIsOpen(!isOpen) }} to="/myrecipes">My Recipes</Link>
                     <Link onClick={() => { setIsOpen(!isOpen) }}  to="/login">

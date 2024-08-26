@@ -4,6 +4,7 @@ import RecipeCards from "../components/RecipeCards";
 import SearchBox from "../components/SearchBox";
 import AddRecipeButton from "../components/AddRecipeButton";
 import UserRecipeData from "../assets/sample_data/user_recipe.json";
+import Data from "../assets/sample_data/recipe.json";
 
 interface PropsType {
   searchButton: boolean
@@ -87,12 +88,12 @@ function MyRecipes({ searchButton }: PropsType) {
 
       {divVisible ?
           <div ref={targetDiv} className={`bg-gradient-overlay-2 flex flex-col pt-24 transition-opacity ease-in duration-[800ms] ${headerVisible ? "opacity-100" : "opacity-0"}`}>
-            <h2 className={`text-5xl max-sm:text-3xl font-semibold text-white text-center`}>Featured Recipes</h2>
+            <h2 className={`text-5xl max-sm:text-3xl font-semibold text-white text-center`}>My Recipes</h2>
             <div className="flex items-center justify-start py-10 px-8 max-sm:px-4 ">
               <div className="text-lg max-sm:text-sm border-solid text-white border-[2px] px-5 py-3 rounded-full">{getRecipeData_ForMyRecipePage.length} recipes found</div>
             </div>
-            <div id="recipe-list" className="grid justify-center items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5 sm:px-10 md:px-14 xl:px-20 py-10">
-              {getRecipeData_ForMyRecipePage.map((item: RecipeDatatype) => {
+            <div id="recipe-list" className="grid justify-center items-center grid-cols-2 gap-10 px-5 sm:px-10 md:px-14 xl:px-20 py-10">
+              {Data.recipes.map((item: RecipeDatatype) => {
                 return <div key={item.recipe_id}><RecipeCards dataobj={item} /></div>
               })}
             </div>

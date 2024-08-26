@@ -105,9 +105,9 @@ const SearchBox = ({ searchShow, handleScrolltoDiv }: PropsType) => {
                     <input className={`w-full focus:outline-none p-3 px-8 ${isshow ? " rounded-t-3xl" : "rounded-full"} shadow-[0_2px_20px_rgba(0,0,0,0.2)]`} type="text" name="searchdata" value={formData} onChange={(e) => setFormData(e.target.value)} placeholder="Search for recipes..." onFocus={() => setisshow(true)} />
 
 
-                    {isshow && <motion.ul initial={{ opacity: 0, height: "0rem" }} animate={{ opacity: 1, height: "16rem" }} exit={{ opacity: 0 }} className="bg-white h-64 w-full overflow-x-hidden overflow-y-auto rounded-bl-3xl rounded-br-none">
-                        {SeachListData.map((item: RecipeDataType) => {
-                            return <li key={item.recipe_id} className="py-4 px-6 border border-b-yellow-400 hover:bg-yellow-100 hover:cursor-pointer flex flex-row justify-start items-center gap-4" onClick={() => {
+                {isshow && <motion.ul initial={{opacity:0,height : "0rem"}} animate={{opacity:1,height : "16rem"}} exit={{opacity:0}} className="bg-white h-64 w-full overflow-x-hidden overflow-y-scroll rounded-b-3xl no-scrollbar">
+                        {SeachListData.map((item:RecipeDataType)=>{
+                            return <li key={item.recipe_id} className="py-4 px-6 border border-b-yellow-400 hover:bg-yellow-100 hover:cursor-pointer flex flex-row justify-start items-center gap-4" onClick={()=>{
                                 handleSubmit_OnSelectItem(item.title);
                             }}>
                                 <img src={item.image_url} alt="rexipe-image" width={"50px"} className="rounded-md" />
