@@ -15,6 +15,7 @@ interface RecipeDatatype {
   ingredients: string[];
   image_url: string;
   category: string;
+  date?: Date; 
 }
 
 const Home = ({ searchButton }: PropsType) => {
