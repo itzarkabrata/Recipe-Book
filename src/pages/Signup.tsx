@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+import axios, {AxiosResponse} from 'axios'
 import Cookies from 'js-cookie'
 import Login_bg from '../assets/images/login_bg.jpg'
 
@@ -41,12 +41,18 @@ const Login = () => {
     }
 
     try{
-      const data:SignupData = await axios.post('',signupData)
-      alert(data.msg)
-      Cookies.set('signup_data',data.user_token,{ expires: 7, path: '/', secure: true })
+      const response: AxiosResponse<SignupData> = await axios.post('',signupData)
+      alert(response.data.msg)
+      Cookies.set('signup_data',response.data.user_token,{ expires: 7, path: '/', secure: true })
     } 
-    catch(error){
-      console.log('post req error : ', error)
+    catch (error) {
+      if (axios.isAxiosError(error)) {
+        // Axios error handling
+        console.error('Axios error posting data:', error.message);
+      } else {
+        // Generic error handling
+        console.error('Error posting data:', error);
+      }
     }
     
   }
