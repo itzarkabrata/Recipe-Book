@@ -1,5 +1,6 @@
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import axios from "axios";
 
 type Props = {
     closeForm_AddRecipeComponent: (event: boolean) => void;
@@ -50,9 +51,10 @@ export default function AddREcipePopUp({ closeForm_AddRecipeComponent }: Props) 
         setrecipedata({ ...recipedata, [name]: value });
     }
 
-    const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
         e.preventDefault();
-        console.log(recipedata);
+        let val = await axios.post("http://localhost/recipe_book_backend/enlist_recipes.php",JSON.stringify(recipedata));
+        console.log(val); 
     }
 
     return (

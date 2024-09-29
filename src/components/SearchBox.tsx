@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import Data from "../assets/sample_data/recipe.json";
+// import Data from "../assets/sample_data/recipe.json";
 import UserRecipeData from "../assets/sample_data/user_recipe.json";
 import { AnimatePresence, motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { addRecipeData } from "../redux_slices/recipe_data_slice/recipe_data";
 import { RootState } from "../redux_store/store";
+import axios from "axios";
+
 
 interface PropsType {
     searchShow: boolean;
@@ -19,7 +21,22 @@ interface RecipeDataType {
     ingredients?: string[];
     image_url?: string;
     category?: string;
+    user_id?:number;
+    date_of_enlist?:string;
 }
+
+
+interface DB_Status{
+    status : number;
+    msg : string;
+}
+
+
+interface getresDataType {
+    database_connectivity_status : DB_Status;
+    recipes : [RecipeDataType];
+}
+
 
 const SearchBox = ({ searchShow, handleScrolltoDiv }: PropsType) => {
 
@@ -54,7 +71,7 @@ const SearchBox = ({ searchShow, handleScrolltoDiv }: PropsType) => {
     useEffect(() => {
 
         // Data.recipes will be stored on Redux
-        let filterSeachList = all_recipe_datas.filter((item: RecipeDataType) => {
+        let filterSeachList = all_recipe_datas?.filter((item: RecipeDataType) => {
             return item.title?.toLowerCase().includes(formData.toLowerCase());
         })
 
@@ -68,26 +85,36 @@ const SearchBox = ({ searchShow, handleScrolltoDiv }: PropsType) => {
     // used for fetching data for search engine list from Database whenever seach dropdown is open
     useEffect(() => {
         //will do the fetch call of getting recipe titles from database if only a dropdown is open
-        if (isshow) {
+        async function getData() {
+            if (isshow) {
 
-            if (window.location.pathname === "/") {
+                if (window.location.pathname === "/") {
+                    console.log("hi");
+                    // fetch call here...
+                    let res_data = await axios.get("https://recipe-book-backend-production.up.railway.app/get_recipes.php");
 
-                // fetch call here...
-
-                // will fetch all datas(title,image) from database
-                dispatch(addRecipeData(Data.recipes));
-                setSeachListData(Data.recipes);
-
-            } else {
-
-                // fetch call here...
-
-                // will fetch only the recipes(title,image) that the user added
-                dispatch(addRecipeData(UserRecipeData.recipes));
-                setSeachListData(UserRecipeData.recipes);
+                    let data:getresDataType = await res_data.data;
+    
+                    // will fetch all datas(title,image) from database
+                    dispatch(addRecipeData(data.recipes));
+                    setSeachListData(data.recipes);
+    
+                } else {
+    
+                    // fetch call here...
+    
+                    // will fetch only the recipes(title,image) that the user added
+                    dispatch(addRecipeData(UserRecipeData.recipes));
+                    setSeachListData(UserRecipeData.recipes);
+                }
+    
             }
-
         }
+        getData().then(()=>{
+            console.log("Hello")
+        }).catch((err)=>{
+            alert(err);
+        });
 
     }, [isshow])
 
@@ -106,7 +133,7 @@ const SearchBox = ({ searchShow, handleScrolltoDiv }: PropsType) => {
 
 
                 {isshow && <motion.ul initial={{opacity:0,height : "0rem"}} animate={{opacity:1,height : "16rem"}} exit={{opacity:0}} className="bg-white h-64 w-full overflow-x-hidden overflow-y-scroll rounded-b-3xl no-scrollbar">
-                        {SeachListData.map((item:RecipeDataType)=>{
+                        {SeachListData?.map((item:RecipeDataType)=>{
                             return <li key={item.recipe_id} className="py-4 px-6 border border-b-yellow-400 hover:bg-yellow-100 hover:cursor-pointer flex flex-row justify-start items-center gap-4" onClick={()=>{
                                 handleSubmit_OnSelectItem(item.title);
                             }}>

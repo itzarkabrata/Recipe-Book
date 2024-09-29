@@ -8,7 +8,12 @@ const Login = () => {
   const [show,setShow] = useState<boolean>(false)
 
   const toggleEye = ()=>{
-    setShowPassword(!showPassword)
+    try {
+      setShowPassword(!showPassword)
+    } catch (error) {
+      //redirect to error page
+      console.log(error);
+    }
   }
 
   useEffect(()=>{
