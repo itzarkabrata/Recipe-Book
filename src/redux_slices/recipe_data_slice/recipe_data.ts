@@ -7,8 +7,10 @@ interface RecipeDataType {
     title: string;
     description?: string;
     ingredients?: string[];
-    image_url: string;
+    image_url?: string;
     category?: string;
+    user_id?:number;
+    date_of_enlist?:string;
 } 
 
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios, { AxiosResponse } from 'axios'
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie';
 import Login_bg from '../assets/images/login_bg.jpg'
 
 
@@ -21,8 +21,13 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false)
   const [show, setShow] = useState<boolean>(false)
 
-  const toggleEye = () => {
-    setShowPassword(!showPassword)
+  const toggleEye = ()=>{
+    try {
+      setShowPassword(!showPassword)
+    } catch (error) {
+      //redirect to error page
+      console.log(error);
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
