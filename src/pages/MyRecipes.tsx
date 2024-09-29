@@ -3,20 +3,35 @@ import Recipe_img from "../assets/images/my_recipe.jpg"
 import RecipeCards from "../components/RecipeCards";
 import SearchBox from "../components/SearchBox";
 import AddRecipeButton from "../components/AddRecipeButton";
-import UserRecipeData from "../assets/sample_data/user_recipe.json";
+import axios from "axios";
 
 interface PropsType {
   searchButton: boolean
 }
 
-interface RecipeDatatype {
-  recipe_id: number;
+interface RecipeDataType {
+  recipe_id?: number;
   title: string;
-  description: string;
-  ingredients: string[];
-  image_url: string;
-  category: string;
+  description?: string;
+  ingredients: string;
+  image_url?: string;
+  category?: string;
+  user_id?:number;
+  date_of_enlist?:string;
 }
+
+
+interface DB_Status{
+  status : number;
+  msg : string;
+}
+
+
+interface getresDataType {
+  database_connectivity_status : DB_Status;
+  recipes : [RecipeDataType];
+}
+
 
 function MyRecipes({ searchButton }: PropsType) {
 
@@ -25,7 +40,7 @@ function MyRecipes({ searchButton }: PropsType) {
   const [isVisible, setisVisible] = useState<boolean>(false)
   const [headerVisible, setheaderVisible] = useState<boolean>(false)
   const [divVisible, setdivVisible] = useState<boolean>(false)
-  const [getRecipeData_ForMyRecipePage, setgetRecipeData_ForMyRecipePage] = useState<RecipeDatatype[]>([]);
+  const [getRecipeData_ForMyRecipePage, setgetRecipeData_ForMyRecipePage] = useState<RecipeDataType[]>([]);
 
 
   useEffect(() => {
@@ -36,23 +51,31 @@ function MyRecipes({ searchButton }: PropsType) {
     return () => clearTimeout(timer);
   }, [])
 
-  const handleScrolltoDiv = (data: string | null) => {
+  const handleScrolltoDiv = async(data: string | null) => {
 
     try {
       //if null is passed i.e user just presses on EXPLORE NOW then all recipes from database are fetched
       if (data === null) {
 
+        let val = await axios.get("https://recipe-book-backend-production.up.railway.app/get_recipes.php?user_id=2");
+
+        let res:getresDataType = await val.data;
+
         // api call from database for getting all recipes that are added by that user
 
-        setgetRecipeData_ForMyRecipePage(UserRecipeData.recipes);
+        setgetRecipeData_ForMyRecipePage(res.recipes);
 
       }
       //else if a title is passed then all recipes that matches the title will be fetched
       else {
 
+        let val = await axios.get("https://recipe-book-backend-production.up.railway.app/get_recipes.php");
+
+        let res:getresDataType = await val.data;
+
         // api call from database for getting specific recipies of the user that matches "data" 
 
-        setgetRecipeData_ForMyRecipePage(UserRecipeData.recipes);
+        setgetRecipeData_ForMyRecipePage(res.recipes);
 
       }
 
@@ -98,7 +121,7 @@ function MyRecipes({ searchButton }: PropsType) {
             <div className="text-lg max-sm:text-sm border-solid text-white border-[2px] px-5 py-3 rounded-full">{getRecipeData_ForMyRecipePage.length} recipes found</div>
           </div>
           <div id="recipe-list" className="grid justify-center items-center grid-cols-2 lg:grid-cols-3 gap-6 px-5 sm:px-10 md:px-14 xl:px-20 py-10">
-            {getRecipeData_ForMyRecipePage.map((item: RecipeDatatype) => {
+            {getRecipeData_ForMyRecipePage.map((item: RecipeDataType) => {
               return <div key={item.recipe_id}><RecipeCards dataobj={item} /></div>
             })}
           </div>
