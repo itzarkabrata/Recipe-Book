@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import Home_img from "../assets/images/home_img.jpg"
 import RecipeCards from "../components/RecipeCards";
 import SearchBox from "../components/SearchBox";
-import Data from "../assets/sample_data/recipe.json";
 import axios from "axios";
 
 interface PropsType {
